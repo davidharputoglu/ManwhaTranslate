@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManwhaTranslate - Extension Firefox Traduction Webtoons</title>
+    <meta name="description" content="Extension Firefox et studio interactif pour traduire directement les images de manwhas et mangas avec détection OCR des bulles, support multi-fournisseurs (DeepL, Google, Yandex) et incrustation in-situ." />
+    <meta property="og:title" content="ManwhaTranslate - Extension Firefox Traduction Webtoons" />
+    <meta property="og:description" content="Extension Firefox et studio interactif pour traduire directement les images de manwhas et mangas avec détection OCR des bulles, support multi-fournisseurs (DeepL, Google, Yandex) et incrustation in-situ." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      // En accord avec les consignes de l'environnement : ignorer les erreurs WebSocket HMR
+      window.addEventListener('error', function(e) {
+        if (e.message && (e.message.includes('WebSocket') || e.message.includes('createWebSocketModuleRunnerTransport'))) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(e) {
+        var msg = (e.reason && (e.reason.message || String(e.reason))) || '';
+        if (msg.includes('WebSocket') || msg.includes('createWebSocketModuleRunnerTransport')) {
+          e.stopImmediatePropagation();
+          e.preventDefault();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

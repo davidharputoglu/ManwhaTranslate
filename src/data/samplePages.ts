@@ -1,0 +1,90 @@
+import { ManwhaSamplePage } from '../types';
+
+export const SAMPLE_PAGES: ManwhaSamplePage[] = [
+  {
+    id: 'sample-spanish',
+    title: 'Solo Leveling (Édition Espagnole)',
+    genre: 'Action / Mazmorra (Español)',
+    imageUrl: '/src/assets/images/manwha_action_fantasy_1792171441079.jpg',
+    sourceLang: 'es',
+    sourceLangName: 'Espagnol (Castellano)',
+    defaultBubbles: [
+      {
+        id: 'bubble-es-1',
+        box: { ymin: 60, xmin: 540, ymax: 185, xmax: 890 },
+        originalText: '¡Todos los monstruos de esta mazmorra serán aniquilados por mí!',
+        translatedText: "Tous les monstres de ce donjon, c'est moi qui vais les anéantir !",
+        bubbleColor: '#ffffff',
+        shape: 'shout',
+      },
+      {
+        id: 'bubble-es-2',
+        box: { ymin: 250, xmin: 50, ymax: 380, xmax: 360 },
+        originalText: '¡Retroceded! ¡No es una bestia que un cazador de rango F pueda enfrentar!',
+        translatedText: "Reculez ! Ce n'est pas une créature qu'un chasseur de rang F peut affronter !",
+        bubbleColor: '#ffffff',
+        shape: 'oval',
+      },
+      {
+        id: 'bubble-es-3',
+        box: { ymin: 800, xmin: 590, ymax: 920, xmax: 940 },
+        originalText: '¡¿La ventana del Sistema... está reaccionando otra vez?!',
+        translatedText: 'La fenêtre du Système... réagit encore une fois ?!',
+        bubbleColor: '#ffffff',
+        shape: 'rectangle',
+      },
+    ],
+  },
+  {
+    id: 'sample-romance',
+    title: 'Le Sourire après les Cours',
+    genre: 'Romance / Vie Scolaire',
+    imageUrl: '/src/assets/images/manwha_romance_slice_1792171457676.jpg',
+    sourceLang: 'ko',
+    sourceLangName: 'Coréen (Hangul)',
+    defaultBubbles: [
+      {
+        id: 'bubble-rom-1',
+        box: { ymin: 650, xmin: 650, ymax: 815, xmax: 945 },
+        originalText: '야! 나 부른 거야?',
+        translatedText: "Hé ! C'est moi que tu appelles ?",
+        bubbleColor: '#ffffff',
+        shape: 'oval',
+      },
+    ],
+  },
+  {
+    id: 'sample-action',
+    title: "L'Éveil du Chasseur de l'Ombre",
+    genre: 'Action / Fantasy Solo',
+    imageUrl: '/src/assets/images/manwha_action_fantasy_1792171441079.jpg',
+    sourceLang: 'ko',
+    sourceLangName: 'Coréen (Hangul)',
+    defaultBubbles: [
+      {
+        id: 'bubble-act-1',
+        box: { ymin: 60, xmin: 540, ymax: 185, xmax: 890 },
+        originalText: '이 던전의 마수는 전부 내가 처리한다!',
+        translatedText: "Tous les monstres de ce donjon, c'est moi qui vais les éliminer !",
+        bubbleColor: '#ffffff',
+        shape: 'shout',
+      },
+      {
+        id: 'bubble-act-2',
+        box: { ymin: 250, xmin: 50, ymax: 380, xmax: 360 },
+        originalText: '물러서라! F급이 감당할 수 있는 놈이 아니야!',
+        translatedText: "Reculez ! Ce n'est pas une bête qu'un rang F peut affronter !",
+        bubbleColor: '#ffffff',
+        shape: 'oval',
+      },
+      {
+        id: 'bubble-act-3',
+        box: { ymin: 800, xmin: 590, ymax: 920, xmax: 940 },
+        originalText: '시스템 창이... 다시 반응하고 있어?!',
+        translatedText: 'La fenêtre du Système... réagit à nouveau ?!',
+        bubbleColor: '#ffffff',
+        shape: 'rectangle',
+      },
+    ],
+  },
+];

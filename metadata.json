@@ -1,0 +1,6 @@
+{
+  "name": "ManwhaTranslate - Extension Firefox Traduction Webtoons",
+  "description": "Extension Firefox et studio interactif pour traduire directement les images de manwhas et mangas avec détection OCR des bulles, support multi-fournisseurs (DeepL, Google, Yandex) et incrustation in-situ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

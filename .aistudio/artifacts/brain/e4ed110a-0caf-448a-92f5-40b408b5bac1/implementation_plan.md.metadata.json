@@ -1,0 +1,6 @@
+{
+  "summary": "Plan d'implémentation pour l'extension Firefox de traduction d'images de manwhas (Webtoons/Mangas) avec support multi-fournisseurs (DeepL, Google, Yandex, mode gratuit sans clé), simulateur interactif et exportateur d'extension WebExtensions prêt pour Firefox.",
+  "updatedAt": "2026-10-16T17:19:57.732668090Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
