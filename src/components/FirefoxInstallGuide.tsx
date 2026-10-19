@@ -48,7 +48,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <TranslationRuneLogo size={36} className="w-9 h-9 drop-shadow-[0_0_10px_rgba(56,189,248,0.5)]" />
+            <TranslationRuneLogo size={36} className="w-9 h-9 drop-shadow-[0_0_10px_rgba(45,212,191,0.5)]" />
             <h1 className="text-2xl font-black tracking-tight text-white">
               Guide d'Installation dans Mozilla Firefox
             </h1>
@@ -61,7 +61,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
         <button
           onClick={handleDownload}
           disabled={isDownloading}
-          className="flex items-center gap-2 px-4 py-2.5 bg-sky-500 hover:bg-sky-400 text-white rounded-xl text-xs font-bold shadow-lg shadow-sky-500/20 transition-all cursor-pointer whitespace-nowrap disabled:opacity-50"
+          className="flex items-center gap-2 px-4 py-2.5 bg-teal-400 hover:bg-teal-300 text-slate-950 rounded-xl text-xs font-bold shadow-lg shadow-teal-500/20 transition-all cursor-pointer whitespace-nowrap disabled:opacity-50"
         >
           <Download className="w-4 h-4" />
           <span>{isDownloading ? 'Génération...' : 'Télécharger l\'extension (.zip)'}</span>
@@ -95,7 +95,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
             Il ne faut pas utiliser <code className="text-slate-400 font-mono">about:addons</code>, mais la page dédiée aux extensions de développement :
           </p>
           <div className="flex items-center gap-2 bg-slate-900 border border-slate-700/80 rounded-lg p-2 max-w-lg">
-            <span className="text-sky-400 font-mono text-xs font-bold flex-1 select-all">
+            <span className="text-teal-400 font-mono text-xs font-bold flex-1 select-all">
               about:debugging#/runtime/this-firefox
             </span>
             <button
@@ -114,7 +114,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
         {/* Step 1 */}
         <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6">
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-black text-sm shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center font-black text-sm shrink-0">
               1
             </div>
             <div className="space-y-2 flex-1">
@@ -122,13 +122,13 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
                 Télécharger et Décompresser l'archive (.zip)
               </h2>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Téléchargez le package <code className="text-sky-300 font-mono font-bold">manwha-translate-firefox.zip</code> et extrayez son contenu dans un dossier (ex: sur votre Bureau ou dans vos Documents).
+                Téléchargez le package <code className="text-teal-300 font-mono font-bold">manwha-translate-firefox.zip</code> et extrayez son contenu dans un dossier (ex: sur votre Bureau ou dans vos Documents).
               </p>
               <div className="flex items-center gap-2 pt-1">
                 <button
                   onClick={handleDownload}
                   disabled={isDownloading}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-lg text-xs font-semibold shadow-sm transition-all cursor-pointer disabled:opacity-50"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold rounded-lg text-xs shadow-md shadow-teal-500/20 transition-all cursor-pointer disabled:opacity-50"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>{isDownloading ? 'Génération...' : 'Télécharger manwha-translate-firefox.zip'}</span>
@@ -141,7 +141,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
         {/* Step 2 */}
         <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6">
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-black text-sm shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center font-black text-sm shrink-0">
               2
             </div>
             <div className="space-y-2 flex-1">
@@ -152,7 +152,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
                 Dans Firefox, ouvrez un nouvel onglet, collez l'adresse ci-dessous dans la barre d'adresse et appuyez sur Entrée :
               </p>
               <div className="flex items-center gap-2 bg-slate-950 border border-slate-700/80 rounded-lg p-2 max-w-md">
-                <code className="text-xs text-sky-300 font-mono flex-1 select-all font-bold">
+                <code className="text-xs text-teal-300 font-mono flex-1 select-all font-bold">
                   about:debugging#/runtime/this-firefox
                 </code>
                 <button
@@ -170,7 +170,7 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
         {/* Step 3 */}
         <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6">
           <div className="flex items-start gap-4">
-            <div className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-black text-sm shrink-0">
+            <div className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center font-black text-sm shrink-0">
               3
             </div>
             <div className="space-y-2 flex-1">
@@ -180,11 +180,11 @@ export const FirefoxInstallGuide: React.FC<FirefoxInstallGuideProps> = ({
               <p className="text-xs text-slate-300 leading-relaxed">
                 Sur la page Firefox, repérez la section <strong>Modules temporaires</strong> et cliquez sur le bouton :
               </p>
-              <div className="inline-block px-3 py-1.5 bg-sky-500/20 border border-sky-500/50 rounded-lg text-xs font-bold text-sky-300 my-1">
+              <div className="inline-block px-3 py-1.5 bg-teal-500/20 border border-teal-500/50 rounded-lg text-xs font-bold text-teal-300 my-1">
                 📂 Charger un module temporaire...
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
-                Dans la fenêtre qui s'ouvre, sélectionnez le fichier <code className="text-white font-mono font-bold bg-slate-800 px-1.5 py-0.5 rounded">manifest.json</code> situé à l'intérieur du dossier que vous avez décompressé (ou sélectionnez directement le fichier <code className="text-sky-300 font-mono">.zip</code>).
+                Dans la fenêtre qui s'ouvre, sélectionnez le fichier <code className="text-white font-mono font-bold bg-slate-800 px-1.5 py-0.5 rounded">manifest.json</code> situé à l'intérieur du dossier que vous avez décompressé (ou sélectionnez directement le fichier <code className="text-teal-300 font-mono">.zip</code>).
               </p>
               <div className="mt-3 p-3 bg-emerald-500/15 border border-emerald-500/40 rounded-xl text-xs text-emerald-300 flex items-center gap-2 font-medium">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />

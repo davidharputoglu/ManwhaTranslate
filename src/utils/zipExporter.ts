@@ -13,9 +13,9 @@ function generateExtensionIconDataUrl(size = 96): string {
 
   // 1. Background gradient (dark mystical navy / indigo)
   const grad = ctx.createLinearGradient(0, 0, size, size);
-  grad.addColorStop(0, '#0f172a');
-  grad.addColorStop(0.5, '#1e1b4b');
-  grad.addColorStop(1, '#090d16');
+  grad.addColorStop(0, '#041217');
+  grad.addColorStop(0.5, '#08232c');
+  grad.addColorStop(1, '#020b0e');
 
   ctx.fillStyle = grad;
   ctx.beginPath();
@@ -23,21 +23,21 @@ function generateExtensionIconDataUrl(size = 96): string {
   ctx.roundRect(2 * scale, 2 * scale, size - 4 * scale, size - 4 * scale, radius);
   ctx.fill();
 
-  // 2. Glowing border
+  // 2. Glowing border in harmonious turquoise
   const borderGrad = ctx.createLinearGradient(0, 0, size, size);
-  borderGrad.addColorStop(0, '#38bdf8');
-  borderGrad.addColorStop(0.5, '#818cf8');
-  borderGrad.addColorStop(1, '#06b6d4');
+  borderGrad.addColorStop(0, '#2dd4bf');
+  borderGrad.addColorStop(0.5, '#06b6d4');
+  borderGrad.addColorStop(1, '#14b8a6');
 
   ctx.strokeStyle = borderGrad;
   ctx.lineWidth = 3 * scale;
   ctx.stroke();
 
-  // 3. Left Side: Mystical Runes (Ancient script in cyan glow)
+  // 3. Left Side: Mystical Runes (Ancient script in turquoise glow)
   ctx.save();
-  ctx.shadowColor = '#38bdf8';
+  ctx.shadowColor = '#2dd4bf';
   ctx.shadowBlur = 8 * scale;
-  ctx.strokeStyle = '#38bdf8';
+  ctx.strokeStyle = '#2dd4bf';
   ctx.lineWidth = 3.5 * scale;
   ctx.lineCap = 'round';
   ctx.lineJoin = 'round';
@@ -62,7 +62,7 @@ function generateExtensionIconDataUrl(size = 96): string {
   ctx.restore();
 
   // Rune spark particles
-  ctx.fillStyle = '#38bdf8';
+  ctx.fillStyle = '#2dd4bf';
   ctx.beginPath();
   ctx.arc(33 * scale, 31 * scale, 2 * scale, 0, Math.PI * 2);
   ctx.arc(35 * scale, 62 * scale, 1.8 * scale, 0, Math.PI * 2);
@@ -70,11 +70,11 @@ function generateExtensionIconDataUrl(size = 96): string {
 
   // 4. Center: Glowing Dynamic Translation Arrow & Energy Beam
   ctx.save();
-  ctx.shadowColor = '#34d399';
+  ctx.shadowColor = '#2dd4bf';
   ctx.shadowBlur = 6 * scale;
   const arrowGrad = ctx.createLinearGradient(38 * scale, 48 * scale, 58 * scale, 48 * scale);
-  arrowGrad.addColorStop(0, '#38bdf8');
-  arrowGrad.addColorStop(1, '#34d399');
+  arrowGrad.addColorStop(0, '#2dd4bf');
+  arrowGrad.addColorStop(1, '#14b8a6');
 
   ctx.strokeStyle = arrowGrad;
   ctx.lineWidth = 4.2 * scale;
@@ -112,17 +112,17 @@ function generateExtensionIconDataUrl(size = 96): string {
   ctx.lineTo(81 * scale, 70 * scale);
   ctx.stroke();
 
-  // Crossbar in vibrant green
-  ctx.strokeStyle = '#34d399';
+  // Crossbar in vibrant turquoise
+  ctx.strokeStyle = '#2dd4bf';
   ctx.lineWidth = 3.4 * scale;
   ctx.beginPath();
   ctx.moveTo(66.5 * scale, 54 * scale);
   ctx.lineTo(77.5 * scale, 54 * scale);
   ctx.stroke();
 
-  // Small 'FR' badge
+  // Small 'FR' badge in deep turquoise
   if (size >= 48) {
-    ctx.fillStyle = '#047857';
+    ctx.fillStyle = '#0f766e';
     ctx.beginPath();
     ctx.roundRect(62 * scale, 72 * scale, 22 * scale, 11 * scale, 3 * scale);
     ctx.fill();
@@ -167,7 +167,7 @@ export async function createExtensionZip(devInfo?: { authorName?: string; email?
   // Package.json for Mozilla AMO submission
   const packageJsonContent = {
     name: "manwha-translate-firefox-addon",
-    version: "1.3.0",
+    version: "0.1.4",
     description: "Extension officielle Firefox pour la traduction instantanée in-situ de manwhas et webtoons",
     author: authorFull,
     developer: {

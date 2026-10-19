@@ -33,8 +33,11 @@ export const Navbar: React.FC<NavbarProps> = ({
       {/* Zone 1: Single text wordmark with Rune-to-Translation Logo */}
       <div className="flex items-center gap-2.5 whitespace-nowrap shrink-0">
         <span className="text-lg font-bold tracking-tight text-white flex items-center gap-2.5">
-          <TranslationRuneLogo size={32} className="w-8 h-8 shrink-0 drop-shadow-[0_0_8px_rgba(56,189,248,0.4)]" />
-          <span>ManwhaTranslate</span>
+          <TranslationRuneLogo size={32} className="w-8 h-8 shrink-0 drop-shadow-[0_0_8px_rgba(45,212,191,0.4)]" />
+          <span className="tracking-tight">ManwhaTranslate</span>
+          <span className="text-[10px] bg-teal-500/15 border border-teal-500/40 text-teal-300 font-mono font-bold px-2 py-0.5 rounded-full">
+            v0.1.4
+          </span>
         </span>
       </div>
 
@@ -42,9 +45,9 @@ export const Navbar: React.FC<NavbarProps> = ({
       <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
         <button
           onClick={() => setActiveTab('simulator')}
-          className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
+          className={`hover:text-teal-300 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
             activeTab === 'simulator'
-              ? 'border-sky-400 text-white'
+              ? 'border-teal-400 text-teal-200 font-bold'
               : 'border-transparent text-slate-400'
           }`}
         >
@@ -52,9 +55,9 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
         <button
           onClick={() => setActiveTab('providers')}
-          className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
+          className={`hover:text-teal-300 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
             activeTab === 'providers'
-              ? 'border-sky-400 text-white'
+              ? 'border-teal-400 text-teal-200 font-bold'
               : 'border-transparent text-slate-400'
           }`}
         >
@@ -62,9 +65,9 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
         <button
           onClick={() => setActiveTab('code')}
-          className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
+          className={`hover:text-teal-300 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
             activeTab === 'code'
-              ? 'border-sky-400 text-white'
+              ? 'border-teal-400 text-teal-200 font-bold'
               : 'border-transparent text-slate-400'
           }`}
         >
@@ -72,9 +75,9 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
         <button
           onClick={() => setActiveTab('guide')}
-          className={`hover:text-white transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
+          className={`hover:text-teal-300 transition-colors whitespace-nowrap shrink-0 py-1 border-b-2 ${
             activeTab === 'guide'
-              ? 'border-sky-400 text-white'
+              ? 'border-teal-400 text-teal-200 font-bold'
               : 'border-transparent text-slate-400'
           }`}
         >
@@ -87,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         <button
           onClick={handleDownload}
           disabled={isDownloading}
-          className="flex items-center gap-2 px-4 py-2 text-xs font-semibold text-white bg-sky-500 hover:bg-sky-400 active:scale-98 rounded-lg shadow-sm shadow-sky-500/25 transition-all whitespace-nowrap shrink-0 cursor-pointer disabled:opacity-50"
+          className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-950 bg-teal-400 hover:bg-teal-300 active:scale-98 rounded-lg shadow-sm shadow-teal-500/25 transition-all whitespace-nowrap shrink-0 cursor-pointer disabled:opacity-50"
         >
           <Download className="w-3.5 h-3.5" />
           <span>{isDownloading ? 'Génération ZIP...' : 'Télécharger (.zip)'}</span>

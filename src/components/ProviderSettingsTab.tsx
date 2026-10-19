@@ -125,12 +125,12 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
           onClick={() => setConfig((p) => ({ ...p, engine: 'free' }))}
           className={`p-4 rounded-xl border transition-all cursor-pointer relative ${
             config.engine === 'free'
-              ? 'bg-sky-500/10 border-sky-500 ring-1 ring-sky-500'
+              ? 'bg-teal-500/10 border-teal-500 ring-1 ring-teal-500'
               : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
           }`}
         >
           <div className="flex items-center justify-between mb-2">
-            <span className="w-8 h-8 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center">
+            <span className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center">
               <Zap className="w-4 h-4" />
             </span>
             <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
@@ -148,12 +148,12 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
           onClick={() => setConfig((p) => ({ ...p, engine: 'deepl' }))}
           className={`p-4 rounded-xl border transition-all cursor-pointer relative ${
             config.engine === 'deepl'
-              ? 'bg-sky-500/10 border-sky-500 ring-1 ring-sky-500'
+              ? 'bg-teal-500/10 border-teal-500 ring-1 ring-teal-500'
               : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
           }`}
         >
           <div className="flex items-center justify-between mb-2">
-            <span className="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center">
+            <span className="w-8 h-8 rounded-lg bg-teal-500/20 text-teal-300 flex items-center justify-center">
               <Globe className="w-4 h-4" />
             </span>
             <span className="text-[10px] font-semibold text-slate-400">DeepL API</span>
@@ -169,7 +169,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
           onClick={() => setConfig((p) => ({ ...p, engine: 'google' }))}
           className={`p-4 rounded-xl border transition-all cursor-pointer relative ${
             config.engine === 'google'
-              ? 'bg-sky-500/10 border-sky-500 ring-1 ring-sky-500'
+              ? 'bg-teal-500/10 border-teal-500 ring-1 ring-teal-500'
               : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
           }`}
         >
@@ -190,7 +190,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
           onClick={() => setConfig((p) => ({ ...p, engine: 'yandex' }))}
           className={`p-4 rounded-xl border transition-all cursor-pointer relative ${
             config.engine === 'yandex'
-              ? 'bg-sky-500/10 border-sky-500 ring-1 ring-sky-500'
+              ? 'bg-teal-500/10 border-teal-500 ring-1 ring-teal-500'
               : 'bg-slate-900/60 border-slate-800 hover:border-slate-700'
           }`}
         >
@@ -222,7 +222,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
               <select
                 value={config.sourceLang}
                 onChange={(e) => setConfig((p) => ({ ...p, sourceLang: e.target.value }))}
-                className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-sky-400"
+                className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-teal-400"
               >
                 <option value="auto">Détection Automatique (Auto-Detect)</option>
                 {SUPPORTED_LANGUAGES.map((lang) => (
@@ -240,7 +240,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
               <select
                 value={config.targetLang}
                 onChange={(e) => setConfig((p) => ({ ...p, targetLang: e.target.value }))}
-                className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-sky-400"
+                className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-teal-400"
               >
                 {SUPPORTED_LANGUAGES.map((lang) => (
                   <option key={`tgt-${lang.code}`} value={lang.code}>
@@ -254,7 +254,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
           {/* Conditional Credentials Input */}
           <div className="pt-4 border-t border-slate-800 space-y-4">
             <h3 className="text-sm font-semibold text-slate-200 flex items-center gap-2">
-              <Key className="w-4 h-4 text-sky-400" />
+              <Key className="w-4 h-4 text-teal-400" />
               Clés d'Authentification (Optionnelles)
             </h3>
 
@@ -267,7 +267,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
                   placeholder="ex: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx:fx"
                   value={config.deeplKey}
                   onChange={(e) => setConfig((p) => ({ ...p, deeplKey: e.target.value }))}
-                  className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-sky-400 font-mono"
+                  className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-teal-400 font-mono"
                 />
                 <span className="text-[11px] text-slate-500 mt-1 block">
                   Si non renseignée, le mode gratuit Google Free sera utilisé en secours.
@@ -284,7 +284,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
                   placeholder="AIzaSy..."
                   value={config.googleKey}
                   onChange={(e) => setConfig((p) => ({ ...p, googleKey: e.target.value }))}
-                  className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-sky-400 font-mono"
+                  className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-teal-400 font-mono"
                 />
                 <span className="text-[11px] text-slate-500 mt-1 block">
                   Si non renseignée, le point d'accès public gratuit sera utilisé sans clé requise.
@@ -302,7 +302,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
                     placeholder="trnsl.1.1... ou Clé IAM Yandex Cloud"
                     value={config.yandexKey}
                     onChange={(e) => setConfig((p) => ({ ...p, yandexKey: e.target.value }))}
-                    className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-sky-400 font-mono"
+                    className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-teal-400 font-mono"
                   />
                 </div>
                 <div>
@@ -312,7 +312,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
                     placeholder="b1g..."
                     value={config.yandexFolderId}
                     onChange={(e) => setConfig((p) => ({ ...p, yandexFolderId: e.target.value }))}
-                    className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-sky-400 font-mono"
+                    className="w-full bg-slate-950 border border-slate-700 text-slate-200 text-sm rounded-lg p-2.5 outline-none focus:border-teal-400 font-mono"
                   />
                 </div>
               </div>
@@ -331,7 +331,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
                 disabled={testStatus === 'testing'}
                 className="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-100 rounded-lg text-xs font-semibold border border-slate-700 transition-colors cursor-pointer disabled:opacity-50"
               >
-                <Clock className="w-3.5 h-3.5 text-sky-400" />
+                <Clock className="w-3.5 h-3.5 text-teal-400" />
                 <span>{testStatus === 'testing' ? 'Test en cours...' : 'Tester la Connectivité'}</span>
               </button>
 
@@ -362,7 +362,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
         <div className="lg:col-span-5 bg-slate-900/60 border border-slate-800 rounded-xl p-6 flex flex-col justify-between">
           <div>
             <h2 className="text-base font-bold text-white mb-2 flex items-center gap-2">
-              <Send className="w-4 h-4 text-sky-400" />
+              <Send className="w-4 h-4 text-teal-400" />
               Bac à Sable Traduction Directe
             </h2>
             <p className="text-xs text-slate-400 mb-4">
@@ -375,14 +375,14 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
                 <textarea
                   value={customInputText}
                   onChange={(e) => setCustomInputText(e.target.value)}
-                  className="w-full bg-slate-950 border border-slate-700 text-slate-100 p-2.5 rounded-lg text-xs outline-none focus:border-sky-400 h-20 resize-none font-sans"
+                  className="w-full bg-slate-950 border border-slate-700 text-slate-100 p-2.5 rounded-lg text-xs outline-none focus:border-teal-400 h-20 resize-none font-sans"
                 />
               </div>
 
               <button
                 onClick={handleTranslateQuickText}
                 disabled={isTranslatingText}
-                className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-sky-500 hover:bg-sky-400 text-white rounded-lg text-xs font-semibold shadow-sm transition-all cursor-pointer disabled:opacity-60"
+                className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold rounded-lg text-xs shadow-md shadow-teal-500/20 transition-all cursor-pointer disabled:opacity-60"
               >
                 <span>{isTranslatingText ? 'Traduction en cours...' : 'Traduire ce dialogue'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
@@ -390,7 +390,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
 
               <div>
                 <label className="text-xs text-slate-400 block mb-1">Résultat traduit ({config.targetLang.toUpperCase()}) :</label>
-                <div className="w-full bg-slate-950/80 border border-slate-800 text-sky-300 p-2.5 rounded-lg text-xs min-h-16 font-medium">
+                <div className="w-full bg-slate-950/80 border border-slate-800 text-teal-300 p-2.5 rounded-lg text-xs min-h-16 font-medium">
                   {customTranslatedText || <span className="text-slate-600 italic">Le résultat apparaîtra ici...</span>}
                 </div>
               </div>
@@ -407,7 +407,7 @@ export const ProviderSettingsTab: React.FC<ProviderSettingsTabProps> = ({
       <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 space-y-4">
         <div>
           <h2 className="text-base font-bold text-white flex items-center gap-2">
-            <Globe className="w-4 h-4 text-sky-400" />
+            <Globe className="w-4 h-4 text-teal-400" />
             Matrice de Compatibilité Linguistique & OCR
           </h2>
           <p className="text-xs text-slate-400 mt-1">

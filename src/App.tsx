@@ -25,7 +25,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#0b0f17] text-slate-100 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#060e14] text-slate-100 flex flex-col font-sans">
       {/* Top Bar Contract (3 zones) */}
       <Navbar
         activeTab={activeTab}

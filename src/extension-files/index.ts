@@ -20,12 +20,12 @@ export const FIREFOX_EXTENSION_FILES: ExtensionFileItem[] = [
   "manifest_version": 2,
   "default_locale": "fr",
   "name": "__MSG_extensionName__",
-  "version": "1.3.0",
+  "version": "0.1.4",
   "description": "__MSG_extensionDesc__",
-  "author": "Nom Prénom <email@example.com>",
+  "author": "kasparof57@gmail.com",
   "developer": {
-    "name": "Nom Prénom",
-    "url": "mailto:email@example.com"
+    "name": "Développeur",
+    "url": "mailto:kasparof57@gmail.com"
   },
   "browser_specific_settings": {
     "gecko": {
@@ -755,9 +755,9 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
   top: 20px;
   left: 50%;
   transform: translateX(-50%) translateY(-20px);
-  background: #0f172a;
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  background: #041217;
+  color: #2dd4bf;
+  border: 1px solid rgba(45, 212, 191, 0.45);
   padding: 10px 20px;
   border-radius: 30px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -777,8 +777,8 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
 
 /* Boîtes OCR détectées */
 .mt-bubbles-layer.mt-ocr-active .mt-bubble-item {
-  outline: 2px dashed #0284c7 !important;
-  box-shadow: 0 0 10px rgba(14, 165, 233, 0.45) !important;
+  outline: 2px dashed #0d9488 !important;
+  box-shadow: 0 0 10px rgba(45, 212, 191, 0.45) !important;
 }
 
 .mt-bubbles-layer.mt-ocr-active .mt-bubble-item::after {
@@ -786,7 +786,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
   position: absolute;
   top: -14px;
   left: 0;
-  background: #0284c7;
+  background: #0d9488;
   color: #ffffff;
   font-size: 8px;
   font-weight: 800;
@@ -939,13 +939,13 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
     .title {
       font-size: 14px;
       font-weight: 700;
-      color: #38bdf8;
+      color: #2dd4bf;
     }
 
     /* Grand Interrupteur Général (Master Switch) */
     .master-switch-card {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      border: 1px solid #334155;
+      background: linear-gradient(135deg, #091d24, #041217);
+      border: 1px solid rgba(45, 212, 191, 0.3);
       border-radius: 12px;
       padding: 14px 16px;
       display: flex;
@@ -969,7 +969,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
     }
     .master-status {
       font-size: 11px;
-      color: #10b981;
+      color: #2dd4bf;
       font-weight: 700;
       display: inline-block;
       margin-top: 2px;
@@ -1010,7 +1010,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
       border-radius: 50%;
     }
     input:checked + .slider {
-      background-color: #0ea5e9;
+      background-color: #14b8a6;
     }
     input:checked + .slider:before {
       transform: translateX(22px);
@@ -1081,7 +1081,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
       border-radius: 50%;
     }
     input:checked + .mini-slider {
-      background-color: #0284c7;
+      background-color: #14b8a6;
     }
     input:checked + .mini-slider:before {
       transform: translateX(16px);
@@ -1100,14 +1100,17 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
     }
     select {
       width: 100%;
-      background: #1e293b;
-      border: 1px solid #334155;
+      background: #0f1c24;
+      border: 1px solid #134e4a;
       color: #f8fafc;
       padding: 6px 8px;
       border-radius: 6px;
       font-size: 12px;
       outline: none;
       box-sizing: border-box;
+    }
+    select:focus {
+      border-color: #2dd4bf;
     }
 
     .row-2 {
@@ -1118,7 +1121,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
 
     .btn-primary {
       width: 100%;
-      background: #0284c7;
+      background: #0d9488;
       color: #ffffff;
       border: none;
       padding: 9px;
@@ -1129,13 +1132,13 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
       margin-top: 4px;
       transition: background 0.15s;
     }
-    .btn-primary:hover { background: #0369a1; }
+    .btn-primary:hover { background: #0f766e; }
 
     .btn-secondary {
       width: 100%;
-      background: #1e293b;
-      color: #38bdf8;
-      border: 1px solid #334155;
+      background: #0a1b24;
+      color: #2dd4bf;
+      border: 1px solid rgba(45, 212, 191, 0.4);
       padding: 7px;
       border-radius: 6px;
       font-size: 11px;
@@ -1144,7 +1147,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
       margin-top: 6px;
       transition: all 0.15s;
     }
-    .btn-secondary:hover { background: #334155; }
+    .btn-secondary:hover { background: #134e4a; color: #ffffff; }
 
     .footer {
       display: flex;
@@ -1155,7 +1158,7 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
       border-top: 1px solid #1e293b;
       font-size: 11px;
     }
-    .footer a { color: #38bdf8; text-decoration: none; }
+    .footer a { color: #2dd4bf; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -1163,17 +1166,17 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
     <div style="display:flex; align-items:center; gap:8px;">
       <img src="icons/icon-48.png" style="width:24px; height:24px; border-radius:6px;" alt="Logo" />
       <div>
-        <div class="title" style="font-size:13px; font-weight:800; color:#38bdf8;">ManwhaTranslate</div>
-        <div id="uiSubtitle" style="font-size:9px; color:#94a3b8;">Runes ᚱ ➔ In-Situ Translation</div>
+        <div class="title" style="font-size:13px; font-weight:800; color:#2dd4bf;">ManwhaTranslate</div>
+        <div id="uiSubtitle" style="font-size:9px; color:#5eead4;">Runes ᚱ ➔ In-Situ Translation</div>
       </div>
     </div>
     <!-- Sélecteur de langue pour l'extension (FR, EN, IT, ES, PT) -->
     <div style="display:flex; gap:3px;" id="uiLangButtons">
-      <button class="ui-lang-btn active" data-lang="fr" style="background:#0284c7; color:#fff; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">FR</button>
-      <button class="ui-lang-btn" data-lang="en" style="background:#1e293b; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">EN</button>
-      <button class="ui-lang-btn" data-lang="it" style="background:#1e293b; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">IT</button>
-      <button class="ui-lang-btn" data-lang="es" style="background:#1e293b; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">ES</button>
-      <button class="ui-lang-btn" data-lang="pt" style="background:#1e293b; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">PT</button>
+      <button class="ui-lang-btn active" data-lang="fr" style="background:#0d9488; color:#fff; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">FR</button>
+      <button class="ui-lang-btn" data-lang="en" style="background:#134e4a; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">EN</button>
+      <button class="ui-lang-btn" data-lang="it" style="background:#134e4a; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">IT</button>
+      <button class="ui-lang-btn" data-lang="es" style="background:#134e4a; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">ES</button>
+      <button class="ui-lang-btn" data-lang="pt" style="background:#134e4a; color:#cbd5e1; border:none; padding:2px 5px; border-radius:4px; font-size:10px; cursor:pointer; font-weight:bold;">PT</button>
     </div>
   </div>
 
@@ -1191,11 +1194,11 @@ async function handleTranslateImage({ imageBase64, mimeType, engine, targetLang,
   </div>
 
   <!-- 2. TRADUCTION AUTOMATIQUE (AUTO-TRANSLATE) -->
-  <div style="background:#111827; border:1px solid #0284c7; border-radius:10px; padding:12px; margin-bottom:12px;">
+  <div style="background:#062329; border:1px solid rgba(45, 212, 191, 0.4); border-radius:10px; padding:12px; margin-bottom:12px;">
     <div style="display:flex; align-items:center; justify-content:space-between;">
       <div>
-        <div id="autoTranslateTitle" style="font-size:12px; font-weight:800; color:#38bdf8;">⚡ TRADUCTION AUTOMATIQUE</div>
-        <div id="autoTranslateSub" style="font-size:10px; color:#94a3b8; margin-top:2px;">Traduit chaque planche dès qu'elle apparaît à l'écran</div>
+        <div id="autoTranslateTitle" style="font-size:12px; font-weight:800; color:#2dd4bf;">⚡ TRADUCTION AUTOMATIQUE</div>
+        <div id="autoTranslateSub" style="font-size:10px; color:#99f6e4; margin-top:2px;">Traduit chaque planche dès qu'elle apparaît à l'écran</div>
       </div>
       <label class="mini-switch">
         <input type="checkbox" id="chkAutoTranslate" checked>
@@ -1469,7 +1472,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     langButtons.forEach(btn => {
       const active = btn.getAttribute('data-lang') === lang;
-      btn.style.background = active ? '#0284c7' : '#1e293b';
+      btn.style.background = active ? '#0d9488' : '#134e4a';
       btn.style.color = active ? '#ffffff' : '#cbd5e1';
     });
 
@@ -1671,7 +1674,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     h1 {
       font-size: 22px;
-      color: #38bdf8;
+      color: #2dd4bf;
       margin-bottom: 6px;
     }
     p.subtitle {
@@ -1681,8 +1684,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       margin-bottom: 24px;
     }
     .card {
-      background: #111827;
-      border: 1px solid #1f2937;
+      background: #07161e;
+      border: 1px solid rgba(45, 212, 191, 0.25);
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
@@ -1690,7 +1693,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     .card-title {
       font-size: 15px;
       font-weight: 600;
-      color: #f1f5f9;
+      color: #2dd4bf;
       margin-bottom: 12px;
     }
     .field {
@@ -1705,8 +1708,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     input[type="text"], input[type="password"] {
       width: 100%;
-      background: #1e293b;
-      border: 1px solid #334155;
+      background: #0b1f28;
+      border: 1px solid #134e4a;
       color: #f8fafc;
       padding: 8px 12px;
       border-radius: 6px;
@@ -1715,10 +1718,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       box-sizing: border-box;
     }
     input:focus {
-      border-color: #38bdf8;
+      border-color: #2dd4bf;
+      box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.25);
     }
     .btn {
-      background: #0284c7;
+      background: #0d9488;
       color: #ffffff;
       border: none;
       padding: 10px 20px;
@@ -1726,8 +1730,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       font-size: 13px;
       font-weight: 600;
       cursor: pointer;
+      transition: background 0.15s;
     }
-    .btn:hover { background: #0369a1; }
+    .btn:hover { background: #0f766e; }
     .status-msg {
       margin-top: 12px;
       font-size: 13px;
@@ -1825,10 +1830,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     path: 'README.md',
     description: 'Documentation complète et guide d’installation pour Mozilla Firefox',
     language: 'markdown',
-    content: `# ManwhaTranslate - Extension Firefox v1.2
+    content: `# ManwhaTranslate - Extension Firefox v0.1.4 (Prêt pour GitHub & Store AMO)
 
-Extension officielle Firefox pour la traduction instantanée d'images de manwhas, webtoons et mangas.
-Intègre un **Interrupteur Général Activer / Désactiver**, le **choix individuel de chaque fonctionnalité** (Côte à côte, Curseur, Bulles, Dock), les moteurs **DeepL / Google / Yandex** et le **Mode Gratuit sans clé**.
+Extension officielle Firefox pour la traduction instantanée in-situ d'images de manwhas, webtoons et mangas.
+Intègre le **Remplacement Direct In-Situ (par-dessus l'original)**, le **respect strict des formes géométriques (Ovale ⬭ et Rectangle ▭)**, l'**ajustement automatique de police** (aucun débordement), et le **support complet de 5 langues (Français 🇫🇷, Anglais 🇬🇧, Italien 🇮🇹, Espagnol 🇪🇸, Portugais 🇵🇹)**.
+Prêt pour la soumission sur le store officiel Mozilla Firefox Add-ons (AMO).
 
 ## 🚀 Installation dans Firefox en 3 étapes :
 
@@ -1851,7 +1857,42 @@ Intègre un **Interrupteur Général Activer / Désactiver**, le **choix individ
   - **Remplacement Direct In-Situ** : Les traductions remplacent les dialogues originaux directement sur la planche.
   - **Respect Géométrique Strict** : Bulles ovales en ovale ⬭, fenêtres Système et cadres en rectangle ▭.
   - **Auto-Ajustement de Police** : Le texte traduit ne déborde jamais des bulles.
-  - **Choix de la Langue Cible** : Basculez instantanément vers le Français, le Russe, l'Espagnol, l'Anglais, etc.
+  - **Palette Turquoise Harmonieuse** : Interface moderne, élégante et reposante pour la lecture.
+  - **Choix de la Langue Cible** : Basculez instantanément vers le Français, l'Anglais, l'Italien, l'Espagnol, le Portugais.
+
+## ⚖️ Licence Officielle : MIT License (Open-Source et Gratuite)
+Cette extension est distribuée sous licence libre et permissive **MIT**.
+- **Usage illimité** : Gratuit, modifiable et redistribuable sans aucune restriction.
+- **Conformité Mozilla Add-ons (AMO)** : La licence MIT est 100% approuvée par Mozilla pour la publication d'extensions.
+- **Auteur & Contact** : kasparof57@gmail.com
+`
+  },
+  {
+    filename: 'LICENSE',
+    path: 'LICENSE',
+    description: 'Licence open-source MIT officielle garantissant la liberté d’usage et publication sur AMO',
+    language: 'markdown',
+    content: `MIT License
+
+Copyright (c) 2026 kasparof57@gmail.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 `
   }
 ];

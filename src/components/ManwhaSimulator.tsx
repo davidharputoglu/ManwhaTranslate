@@ -222,7 +222,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
     if (shape === 'shout') {
       return { label: 'Cri 💥', icon: Sparkles, color: 'text-red-400 bg-red-400/10 border-red-400/30' };
     }
-    return { label: 'Ovale ⬭', icon: Circle, color: 'text-sky-400 bg-sky-400/10 border-sky-400/30' };
+    return { label: 'Ovale ⬭', icon: Circle, color: 'text-teal-400 bg-teal-400/10 border-teal-400/30' };
   };
 
   // Handle master toggle: Turns ON or OFF everything in 1 click
@@ -530,7 +530,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
       // Package.json for Firefox AMO Add-ons Store
       const packageJsonContent = {
         name: "manwha-translate-firefox-addon",
-        version: "1.3.0",
+        version: "0.1.4",
         description: "Extension officielle Firefox pour la traduction instantanée in-situ de manwhas et webtoons",
         author: authorFull,
         developer: {
@@ -600,7 +600,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
             </div>
 
             {/* Active Tab */}
-            <div className="bg-[#1e222d] text-slate-200 text-xs px-3.5 py-1.5 rounded-t-lg font-medium flex items-center gap-2 border-t-2 border-sky-400 shadow-inner">
+            <div className="bg-[#1e222d] text-slate-200 text-xs px-3.5 py-1.5 rounded-t-lg font-medium flex items-center gap-2 border-t-2 border-teal-400 shadow-inner">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="truncate max-w-[200px] sm:max-w-xs font-semibold">
                 {customImage ? customImageName : currentPage.title} - Webtoon Reader
@@ -669,15 +669,15 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 }}
                 className={`relative px-2.5 py-1.5 rounded-lg font-bold text-xs flex items-center gap-2 transition-all cursor-pointer shadow-md ${
                   isPopupOpen
-                    ? 'bg-sky-500 text-slate-950 ring-2 ring-sky-300 scale-102'
+                    ? 'bg-teal-400 text-slate-950 ring-2 ring-teal-300 scale-102 shadow-teal-500/25'
                     : extState.masterEnabled
-                    ? 'bg-sky-950/80 border border-sky-500/80 text-sky-200 hover:bg-sky-900'
+                    ? 'bg-teal-950/80 border border-teal-500/80 text-teal-200 hover:bg-teal-900'
                     : 'bg-slate-800 border border-slate-700 text-slate-400 hover:bg-slate-700'
                 }`}
                 title="Numéro 1 : Cliquer pour ouvrir le popup de contrôle ManwhaTranslate"
               >
                 {/* Visual badge [ 1 ] */}
-                <span className="bg-sky-400 text-slate-950 text-[10px] font-black px-1.5 py-0.2 rounded-full shadow">
+                <span className="bg-teal-500 text-slate-950 text-[10px] font-black px-1.5 py-0.2 rounded-full shadow">
                   1
                 </span>
 
@@ -686,7 +686,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                   <span className="text-[13px] font-serif font-black tracking-tighter text-amber-300 drop-shadow">
                     ᚱ
                   </span>
-                  <span className="text-[10px] text-sky-300 font-extrabold">➔</span>
+                  <span className="text-[10px] text-teal-300 font-extrabold">➔</span>
                   <span className="text-[11px] font-black tracking-wide">
                     {currentTargetLangObj.code.toUpperCase()}
                   </span>
@@ -741,7 +741,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 <div className="absolute right-0 top-10 w-72 bg-[#181a20] border border-slate-700 rounded-xl shadow-2xl p-3 z-50 animate-fade-in text-xs">
                   <div className="flex items-center justify-between pb-2 border-b border-slate-800 mb-2 font-bold text-white">
                     <span>Extensions installées</span>
-                    <span className="text-[10px] text-sky-400">Firefox</span>
+                    <span className="text-[10px] text-teal-400">Firefox</span>
                   </div>
                   <div className="space-y-1.5">
                     <div
@@ -749,13 +749,13 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                         setIsExtensionsMenuOpen(false);
                         setIsPopupOpen(true);
                       }}
-                      className="p-2 rounded-lg bg-sky-950/60 border border-sky-500/40 hover:bg-sky-900/60 cursor-pointer flex items-center justify-between"
+                      className="p-2 rounded-lg bg-teal-950/60 border border-teal-500/40 hover:bg-teal-900/60 cursor-pointer flex items-center justify-between"
                     >
                       <div className="flex items-center gap-2">
                         <span className="text-amber-300 font-serif font-black text-sm">ᚱ</span>
                         <div>
                           <div className="font-bold text-white">ManwhaTranslate [ 1 ]</div>
-                          <div className="text-[10px] text-sky-300">Épinglée à la barre d'outils</div>
+                          <div className="text-[10px] text-teal-300">Épinglée à la barre d'outils</div>
                         </div>
                       </div>
                       <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -769,19 +769,19 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
             {isPopupOpen && (
               <div
                 id="manwha-translate-popup"
-                className="absolute right-0 top-11 w-[340px] sm:w-[380px] bg-[#0c1017] border-2 border-sky-500/80 rounded-2xl shadow-2xl p-4 z-50 text-slate-100 max-h-[85vh] overflow-y-auto animate-fade-in ring-4 ring-sky-500/10"
+                className="absolute right-0 top-11 w-[340px] sm:w-[380px] bg-[#071317] border-2 border-teal-500/80 rounded-2xl shadow-2xl p-4 z-50 text-slate-100 max-h-[85vh] overflow-y-auto animate-fade-in ring-4 ring-teal-500/10"
               >
                 {/* Popup Header */}
                 <div className="flex items-center justify-between pb-2.5 border-b border-slate-800 mb-3">
                   <div className="flex items-center gap-2">
-                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-400 via-sky-500 to-indigo-600 flex items-center justify-center shadow">
+                    <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-teal-400 via-cyan-500 to-emerald-500 flex items-center justify-center shadow">
                       <span className="text-slate-950 font-serif font-black text-sm">ᚱ</span>
                     </div>
                     <div>
                       <div className="text-xs font-black text-white flex items-center gap-1.5">
                         <span>ManwhaTranslate</span>
-                        <span className="bg-sky-500/20 text-sky-300 text-[9px] px-1.5 py-0.2 rounded font-mono font-bold">
-                          v2.4
+                        <span className="bg-teal-500/20 text-teal-300 text-[9px] px-1.5 py-0.2 rounded font-mono font-bold">
+                          v0.1.4
                         </span>
                       </div>
                       <div className="text-[10px] text-slate-400">
@@ -799,7 +799,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
 
                 {/* 1. INTERRUPTEUR GÉNÉRAL (MASTER SWITCH) */}
-                <div className="bg-gradient-to-r from-slate-900 to-[#141b2d] border border-slate-700/80 rounded-xl p-3 mb-3 shadow-lg">
+                <div className="bg-gradient-to-r from-slate-900 to-[#0c1f24] border border-teal-500/30 rounded-xl p-3 mb-3 shadow-lg">
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="text-xs font-black text-white flex items-center gap-1.5">
@@ -816,7 +816,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                     <button
                       onClick={handleToggleMaster}
                       className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none ${
-                        extState.masterEnabled ? 'bg-sky-500' : 'bg-slate-700'
+                        extState.masterEnabled ? 'bg-teal-400' : 'bg-slate-700'
                       }`}
                     >
                       <span
@@ -829,10 +829,10 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
 
                 {/* 2. TRADUCTION AUTOMATIQUE (AUTO-TRANSLATE) */}
-                <div className="bg-[#111827] border border-sky-500/60 rounded-xl p-3 mb-3 shadow-md">
+                <div className="bg-[#081b22] border border-teal-500/50 rounded-xl p-3 mb-3 shadow-md">
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-xs font-black text-sky-300 flex items-center gap-1.5">
+                      <div className="text-xs font-black text-teal-300 flex items-center gap-1.5">
                         <Zap className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
                         <span>TRADUCTION AUTOMATIQUE</span>
                       </div>
@@ -845,7 +845,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       onClick={() => handleToggleFeature('autoTranslate')}
                       disabled={!extState.masterEnabled}
                       className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none disabled:opacity-40 ${
-                        extState.autoTranslate ? 'bg-sky-500' : 'bg-slate-700'
+                        extState.autoTranslate ? 'bg-teal-400' : 'bg-slate-700'
                       }`}
                     >
                       <span
@@ -858,8 +858,8 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
 
                 {/* 3. MODE D'AFFICHAGE : REMPLACER L'ORIGINAL vs CÔTE À CÔTE */}
-                <div className="bg-[#111827] border border-slate-800 rounded-xl p-2.5 mb-3">
-                  <div className="text-[10px] font-bold text-sky-400 uppercase tracking-wider mb-2">
+                <div className="bg-[#091b22] border border-teal-500/30 rounded-xl p-2.5 mb-3">
+                  <div className="text-[10px] font-bold text-teal-400 uppercase tracking-wider mb-2">
                     MODE D'AFFICHAGE DU WEBTOON
                   </div>
                   <div className="grid grid-cols-2 gap-2">
@@ -868,7 +868,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       disabled={!extState.masterEnabled}
                       className={`p-2 rounded-lg text-left text-xs font-bold transition-all cursor-pointer flex flex-col gap-0.5 border ${
                         !extState.enableSideBySide && extState.replaceOriginal
-                          ? 'bg-sky-500/20 border-sky-400 text-sky-200 ring-1 ring-sky-400'
+                          ? 'bg-teal-500/20 border-teal-400 text-teal-200 ring-1 ring-teal-400'
                           : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'
                       }`}
                     >
@@ -886,7 +886,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       disabled={!extState.masterEnabled}
                       className={`p-2 rounded-lg text-left text-xs font-bold transition-all cursor-pointer flex flex-col gap-0.5 border ${
                         extState.enableSideBySide
-                          ? 'bg-sky-500/20 border-sky-400 text-sky-200 ring-1 ring-sky-400'
+                          ? 'bg-teal-500/20 border-teal-400 text-teal-200 ring-1 ring-teal-400'
                           : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'
                       }`}
                     >
@@ -902,8 +902,8 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
 
                 {/* 4. LANGUES & MOTEUR */}
-                <div className="bg-[#111827] border border-slate-800 rounded-xl p-3 mb-3 space-y-2">
-                  <div className="flex items-center justify-between text-[10px] font-bold text-sky-400 uppercase tracking-wider">
+                <div className="bg-[#091b22] border border-teal-500/30 rounded-xl p-3 mb-3 space-y-2">
+                  <div className="flex items-center justify-between text-[10px] font-bold text-teal-400 uppercase tracking-wider">
                     <span className="flex items-center gap-1">
                       <Globe className="w-3 h-3" />
                       <span>LANGUES DE TRADUCTION</span>
@@ -931,12 +931,12 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
 
                     {/* Target Lang (Russe, Français, Anglais, Espagnol, etc.) */}
                     <div className="space-y-1">
-                      <label className="text-[10px] font-semibold text-sky-300 block">Langue Cible</label>
+                      <label className="text-[10px] font-semibold text-teal-300 block">Langue Cible</label>
                       <select
                         value={config.targetLang}
                         onChange={(e) => handleTargetLanguageChange(e.target.value)}
                         disabled={!extState.masterEnabled}
-                        className="w-full bg-slate-900 border border-sky-500/60 text-xs text-white p-1.5 rounded-lg outline-none cursor-pointer font-bold disabled:opacity-40"
+                        className="w-full bg-slate-900 border border-teal-500/60 text-xs text-white p-1.5 rounded-lg outline-none cursor-pointer font-bold disabled:opacity-40"
                       >
                         {TARGET_LANGUAGES.map((l) => (
                           <option key={l.code} value={l.code}>
@@ -965,14 +965,14 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
 
                 {/* 5. RESPECT STRICT DES FORMES DE BULLES */}
-                <div className="bg-[#090d16] border border-slate-800 rounded-xl p-2.5 mb-3 text-xs">
-                  <div className="flex items-center gap-1.5 font-bold text-sky-400 text-[10px] uppercase mb-1">
+                <div className="bg-[#091b22] border border-teal-500/30 rounded-xl p-2.5 mb-3 text-xs">
+                  <div className="flex items-center gap-1.5 font-bold text-teal-400 text-[10px] uppercase mb-1">
                     <span>📐</span>
                     <span>FIDÉLITÉ GÉOMÉTRIQUE STRICTE DES BULLES</span>
                   </div>
                   <div className="grid grid-cols-2 gap-2 text-[10px] text-slate-300">
                     <div className="bg-slate-900/90 border border-slate-800 p-1.5 rounded flex items-center gap-1.5">
-                      <span className="w-3.5 h-3.5 rounded-full border border-sky-400 shrink-0 inline-block" />
+                      <span className="w-3.5 h-3.5 rounded-full border border-teal-400 shrink-0 inline-block" />
                       <span><strong>Ovale ⬭</strong> : Rendu strictement ovale</span>
                     </div>
                     <div className="bg-slate-900/90 border border-slate-800 p-1.5 rounded flex items-center gap-1.5">
@@ -983,8 +983,8 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
 
                 {/* 6. OPTIONS GRANULAIRES (À LA CARTE) */}
-                <div className="bg-[#111827] border border-slate-800 rounded-xl p-3 mb-3.5 space-y-2">
-                  <div className="flex items-center justify-between text-[10px] font-bold text-sky-400 uppercase tracking-wider mb-1">
+                <div className="bg-[#091b22] border border-teal-500/30 rounded-xl p-3 mb-3.5 space-y-2">
+                  <div className="flex items-center justify-between text-[10px] font-bold text-teal-400 uppercase tracking-wider mb-1">
                     <span>OPTIONS D'AFFICHAGE</span>
                     <span className="text-slate-500">À la carte</span>
                   </div>
@@ -1006,7 +1006,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       checked={extState.enableOcrDetection}
                       onChange={() => handleToggleFeature('enableOcrDetection')}
                       disabled={!extState.masterEnabled}
-                      className="w-4 h-4 accent-sky-500 cursor-pointer disabled:opacity-40"
+                      className="w-4 h-4 accent-teal-400 cursor-pointer disabled:opacity-40"
                     />
                   </label>
 
@@ -1025,7 +1025,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       checked={extState.enableBubbleOverlay}
                       onChange={() => handleToggleFeature('enableBubbleOverlay')}
                       disabled={!extState.masterEnabled}
-                      className="w-4 h-4 accent-sky-500 cursor-pointer disabled:opacity-40"
+                      className="w-4 h-4 accent-teal-400 cursor-pointer disabled:opacity-40"
                     />
                   </label>
                 </div>
@@ -1035,7 +1035,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                   <button
                     onClick={handleTranslatePage}
                     disabled={isTranslating || !extState.masterEnabled}
-                    className="w-full bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-slate-950 font-black py-2.5 px-3 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-xs cursor-pointer disabled:opacity-50"
+                    className="w-full bg-gradient-to-r from-teal-400 to-emerald-400 hover:from-teal-300 hover:to-emerald-300 text-slate-950 font-black py-2.5 px-3 rounded-xl shadow-lg shadow-teal-500/20 transition-all flex items-center justify-center gap-2 text-xs cursor-pointer disabled:opacity-50"
                   >
                     <RefreshCw className={`w-3.5 h-3.5 ${isTranslating ? 'animate-spin' : ''}`} />
                     <span>
@@ -1048,7 +1048,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                   <button
                     onClick={handleDetectBubbles}
                     disabled={isDetectingBubbles || !extState.masterEnabled}
-                    className="w-full bg-slate-800 hover:bg-slate-700 text-sky-300 font-bold py-2 px-3 rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-2 text-xs cursor-pointer disabled:opacity-50"
+                    className="w-full bg-slate-800 hover:bg-slate-700 text-teal-300 hover:text-teal-200 font-bold py-2 px-3 rounded-xl border border-teal-500/30 hover:border-teal-500/60 transition-all flex items-center justify-center gap-2 text-xs cursor-pointer disabled:opacity-50"
                   >
                     <Scan className={`w-3.5 h-3.5 ${isDetectingBubbles ? 'animate-spin' : ''}`} />
                     <span>Détecter les bulles (OCR)</span>
@@ -1061,7 +1061,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                     <span>Planche de test / Import</span>
                     <button
                       onClick={() => fileInputRef.current?.click()}
-                      className="text-sky-400 hover:underline flex items-center gap-1 cursor-pointer"
+                      className="text-teal-400 hover:text-teal-300 hover:underline flex items-center gap-1 cursor-pointer"
                     >
                       <Upload className="w-2.5 h-2.5" />
                       <span>Importer image</span>
@@ -1081,7 +1081,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                         onClick={() => handleSelectPage(page.id)}
                         className={`p-1.5 rounded-lg text-left text-[10px] font-medium transition-all truncate border cursor-pointer ${
                           !customImage && selectedPageId === page.id
-                            ? 'bg-sky-500/20 border-sky-400 text-sky-200'
+                            ? 'bg-teal-500/20 border-teal-400 text-teal-200 ring-1 ring-teal-400'
                             : 'bg-slate-900 border-slate-800 text-slate-400 hover:text-white'
                         }`}
                       >
@@ -1098,7 +1098,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                   <button
                     onClick={handleDownloadZip}
                     disabled={isDownloading}
-                    className="text-sky-400 hover:underline flex items-center gap-1 font-semibold cursor-pointer"
+                    className="text-teal-400 hover:text-teal-300 hover:underline flex items-center gap-1 font-semibold cursor-pointer"
                   >
                     <Download className="w-3 h-3" />
                     <span>{isDownloading ? 'Génération...' : 'Télécharger .zip'}</span>
@@ -1110,13 +1110,13 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
         </div>
 
         {/* 3. SIMULATED WEBPAGE CONTENT: Authentic Manga / Webtoon Reader */}
-        <div className="p-3 sm:p-6 bg-[#090d16] min-h-[600px] relative">
+        <div className="p-3 sm:p-6 bg-[#061014] min-h-[600px] relative">
           
           {/* Header of the simulated Webtoon website */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-4 border-b border-slate-800/80 text-xs gap-2">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 mb-4 border-b border-teal-900/30 text-xs gap-2">
             <div className="flex items-center gap-2">
               <span className="font-extrabold text-white tracking-wide uppercase text-sm">
-                Webtoons <span className="text-sky-400">Reader</span>
+                Webtoons <span className="text-teal-400">Reader</span>
               </span>
               <span className="text-slate-600">/</span>
               <span className="text-slate-300 font-medium truncate max-w-[200px] sm:max-w-md">
@@ -1126,13 +1126,13 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
 
             <div className="flex flex-wrap items-center gap-2">
               {/* Badge Remplacement In-situ */}
-              <div className="flex items-center gap-1.5 bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 px-2.5 py-1 rounded-lg text-[11px] font-bold">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <div className="flex items-center gap-1.5 bg-teal-500/15 border border-teal-500/30 text-teal-300 px-2.5 py-1 rounded-lg text-[11px] font-bold">
+                <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
                 <span>Remplacement In-Situ (100% Direct)</span>
               </div>
 
               {/* 5 Quick language buttons */}
-              <div className="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-[11px]">
+              <div className="flex items-center bg-slate-900/80 border border-teal-900/40 rounded-lg p-0.5 text-[11px]">
                 {[
                   { code: 'fr', flag: '🇫🇷', label: 'FR' },
                   { code: 'en', flag: '🇬🇧', label: 'EN' },
@@ -1148,7 +1148,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                     }}
                     className={`px-2 py-0.5 rounded text-[11px] font-bold transition-all cursor-pointer flex items-center gap-1 ${
                       config.targetLang === l.code
-                        ? 'bg-sky-500 text-slate-950 shadow'
+                        ? 'bg-teal-400 text-slate-950 shadow-sm shadow-teal-500/25'
                         : 'text-slate-400 hover:text-white'
                     }`}
                     title={`Traduire immédiatement en ${l.label}`}
@@ -1170,9 +1170,9 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
 
           {/* Status Toast / Notification */}
           {statusMessage && (
-            <div className="bg-sky-500/15 border border-sky-500/40 text-sky-200 px-4 py-2.5 rounded-xl text-xs flex items-center justify-between mb-4 shadow-md animate-fade-in">
+            <div className="bg-teal-500/15 border border-teal-500/40 text-teal-200 px-4 py-2.5 rounded-xl text-xs flex items-center justify-between mb-4 shadow-md animate-fade-in">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-teal-400 shrink-0" />
                 <span className="font-medium">{statusMessage}</span>
               </div>
               <button
@@ -1198,7 +1198,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
               </div>
               <button
                 onClick={handleToggleMaster}
-                className="px-3 py-1.5 bg-sky-500 text-white font-bold text-xs rounded-lg hover:bg-sky-400 cursor-pointer shrink-0 ml-3 shadow"
+                className="px-3 py-1.5 bg-teal-400 text-slate-950 font-bold text-xs rounded-lg hover:bg-teal-300 cursor-pointer shrink-0 ml-3 shadow"
               >
                 Activer
               </button>
@@ -1236,15 +1236,15 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                Aucun texte ne dépasse de la bulle.
             */
             <div className="space-y-6">
-              <div className="max-w-xl mx-auto bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-2xl p-4">
+              <div className="max-w-xl mx-auto bg-slate-950 border border-teal-900/40 rounded-2xl overflow-hidden shadow-2xl p-4">
                 <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-sm shadow-emerald-400/50" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-teal-400 shadow-sm shadow-teal-400/50" />
                     <span className="text-xs font-bold text-white uppercase tracking-wider">
                       Planche Traduite — Remplacement Direct In-Situ ({currentTargetLangObj.flag} {currentTargetLangObj.label})
                     </span>
                   </div>
-                  <span className="text-[10px] text-sky-400 font-bold bg-sky-500/10 border border-sky-500/30 px-2 py-0.5 rounded">
+                  <span className="text-[10px] text-teal-300 font-bold bg-teal-500/10 border border-teal-500/30 px-2 py-0.5 rounded">
                     Originaux Remplacés
                   </span>
                 </div>
@@ -1281,10 +1281,10 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                             b.shape
                           )} ${
                             isBubbleActive
-                              ? 'ring-2 ring-sky-400 z-30 scale-102'
+                              ? 'ring-2 ring-teal-400 z-30 scale-102'
                               : isBubbleHovered
-                              ? 'ring-2 ring-sky-300 z-20 scale-101'
-                              : 'hover:ring-2 hover:ring-sky-400/80 z-20'
+                              ? 'ring-2 ring-teal-300 z-20 scale-101'
+                              : 'hover:ring-2 hover:ring-teal-400/80 z-20'
                           }`}
                           style={{
                             top: `${top}%`,
@@ -1328,13 +1328,13 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                               setStatusMessage(`Forme changée en ${b.shape === 'oval' ? 'Rectangle ▭' : 'Ovale ⬭'}`);
                               setTimeout(() => setStatusMessage(null), 2500);
                             }}
-                            className="absolute -bottom-2 -left-2 bg-slate-900 border border-slate-700 text-sky-400 rounded-full w-5 h-5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow text-[9px] hover:bg-slate-800"
+                            className="absolute -bottom-2 -left-2 bg-slate-900 border border-teal-500/50 text-teal-300 rounded-full w-5 h-5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity shadow text-[9px] hover:bg-slate-800"
                             title="Basculer instantanément : Ovale ⬭ / Rectangle ▭"
                           >
                             {b.shape === 'oval' ? '▭' : '⬭'}
                           </button>
 
-                          <span className="absolute -top-2 -right-2 bg-sky-500 text-white rounded-full p-0.5 opacity-0 group-hover:opacity-100 transition-opacity shadow text-[9px]">
+                          <span className="absolute -top-2 -right-2 bg-teal-400 text-slate-950 rounded-full p-0.5 opacity-0 group-hover:opacity-100 transition-opacity shadow text-[9px] font-bold">
                             <Edit2 className="w-2.5 h-2.5" />
                           </span>
                         </div>
@@ -1343,20 +1343,23 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                 </div>
               </div>
 
-              {/* Developer Metadata & Firefox Store (AMO) Card */}
-              <div className="max-w-xl mx-auto bg-slate-950/95 border border-sky-500/30 rounded-2xl p-5 shadow-2xl space-y-4">
+              {/* Developer Metadata, License & Firefox Store (AMO) Card */}
+              <div className="max-w-xl mx-auto bg-slate-950/95 border border-teal-500/30 rounded-2xl p-5 shadow-2xl shadow-teal-500/5 space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                   <div className="flex items-center gap-2.5">
                     <span className="text-xl">🦊</span>
                     <div>
-                      <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                      <h3 className="text-sm font-bold text-white flex items-center gap-2 flex-wrap">
                         <span>Soumission Firefox Store (AMO) & Coordonnées</span>
-                        <span className="text-[10px] bg-sky-500/20 text-sky-300 border border-sky-500/40 px-2 py-0.5 rounded-full font-mono">
+                        <span className="text-[10px] bg-teal-500/15 text-teal-300 border border-teal-500/30 px-2 py-0.5 rounded-full font-mono">
                           manifest.json & package.json
+                        </span>
+                        <span className="text-[10px] bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-mono font-bold">
+                          Licence MIT (Libre & Gratuite)
                         </span>
                       </h3>
                       <p className="text-[11px] text-slate-400 mt-0.5">
-                        Vos coordonnées sont automatiquement intégrées dans le fichier zip pour validation sur addons.mozilla.org
+                        Vos coordonnées et la licence libre MIT sont automatiquement intégrées dans l'archive pour validation sur addons.mozilla.org
                       </p>
                     </div>
                   </div>
@@ -1372,7 +1375,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       value={devFirstName}
                       onChange={(e) => setDevFirstName(e.target.value)}
                       placeholder="Votre prénom"
-                      className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-sky-400"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
                     />
                   </div>
                   <div>
@@ -1384,7 +1387,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                       value={devLastName}
                       onChange={(e) => setDevLastName(e.target.value)}
                       placeholder="Votre nom de famille"
-                      className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-sky-400"
+                      className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-teal-400"
                     />
                   </div>
                 </div>
@@ -1398,18 +1401,18 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                     value={devEmail}
                     onChange={(e) => setDevEmail(e.target.value)}
                     placeholder="kasparof57@gmail.com"
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-sky-400 font-mono"
+                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:ring-1 focus:ring-teal-400 font-mono"
                   />
                 </div>
 
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-slate-800">
                   <div className="text-[10px] text-slate-400">
-                    Auteur : <strong className="text-sky-300">{devFirstName || devLastName ? `${devFirstName} ${devLastName}`.trim() : 'Auteur'} &lt;{devEmail}&gt;</strong>
+                    Auteur : <strong className="text-teal-300">{devFirstName || devLastName ? `${devFirstName} ${devLastName}`.trim() : 'Auteur'} &lt;{devEmail}&gt;</strong> · <span className="text-emerald-400 font-medium">Licence MIT</span>
                   </div>
                   <button
                     onClick={handleDownloadZip}
                     disabled={isDownloading}
-                    className="w-full sm:w-auto px-4 py-2 bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg shadow-sky-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="w-full sm:w-auto px-4 py-2 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold text-xs rounded-xl shadow-lg shadow-teal-500/25 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>{isDownloading ? 'Génération...' : 'Télécharger le ZIP Firefox Store'}</span>
@@ -1422,10 +1425,10 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
           {/* Bubble Inline Editor Modal when a bubble is clicked */}
           {activeBubbleId && (
             <div className="fixed inset-0 bg-black/60 backdrop-blur-xs flex items-center justify-center z-50 p-4">
-              <div className="bg-slate-900 border border-slate-700 rounded-2xl p-5 max-w-lg w-full shadow-2xl animate-fade-in space-y-4">
+              <div className="bg-slate-900 border border-teal-500/40 rounded-2xl p-5 max-w-lg w-full shadow-2xl animate-fade-in space-y-4">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                   <div className="flex items-center gap-2">
-                    <Edit2 className="w-4 h-4 text-sky-400" />
+                    <Edit2 className="w-4 h-4 text-teal-400" />
                     <span className="font-bold text-white text-sm">Éditeur de Bulle</span>
                   </div>
                   <button
@@ -1447,14 +1450,14 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                   </div>
 
                   <div>
-                    <label className="text-xs font-semibold text-sky-300 block mb-1">
+                    <label className="text-xs font-semibold text-teal-300 block mb-1">
                       Traduction ({currentTargetLangObj.label})
                     </label>
                     <textarea
                       value={editingText}
                       onChange={(e) => setEditingText(e.target.value)}
                       rows={3}
-                      className="w-full bg-slate-950 border border-sky-500/60 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-sky-400"
+                      className="w-full bg-slate-950 border border-teal-500/50 rounded-lg p-2.5 text-sm text-white focus:outline-none focus:ring-2 focus:ring-teal-400"
                     />
                   </div>
 
@@ -1484,7 +1487,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                             }}
                             className={`p-2 rounded-lg text-xs font-bold border cursor-pointer transition-all ${
                               isSel
-                                ? 'bg-sky-500 text-slate-950 border-sky-400'
+                                ? 'bg-teal-400 text-slate-950 border-teal-300'
                                 : 'bg-slate-950 text-slate-400 border-slate-800 hover:text-white'
                             }`}
                           >
@@ -1505,7 +1508,7 @@ export const ManwhaSimulator: React.FC<ManwhaSimulatorProps> = ({ config, setCon
                   </button>
                   <button
                     onClick={handleSaveBubbleEdit}
-                    className="px-4 py-1.5 text-xs font-bold bg-sky-500 text-slate-950 hover:bg-sky-400 rounded-lg shadow cursor-pointer"
+                    className="px-4 py-1.5 text-xs font-bold bg-teal-400 text-slate-950 hover:bg-teal-300 rounded-lg shadow-md shadow-teal-500/20 cursor-pointer"
                   >
                     Enregistrer la modification
                   </button>

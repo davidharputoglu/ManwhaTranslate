@@ -19,18 +19,18 @@ export const TranslationRuneLogo: React.FC<TranslationRuneLogoProps> = ({
       className={className}
     >
       <defs>
-        {/* Background gradient */}
+        {/* Background gradient (deep obsidian teal) */}
         <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0f172a" />
-          <stop offset="50%" stopColor="#1e1b4b" />
-          <stop offset="100%" stopColor="#0b0f17" />
+          <stop offset="0%" stopColor="#041217" />
+          <stop offset="50%" stopColor="#08232c" />
+          <stop offset="100%" stopColor="#020b0e" />
         </linearGradient>
 
-        {/* Border glow gradient */}
+        {/* Border glow gradient in harmonious turquoise */}
         <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#38bdf8" />
-          <stop offset="50%" stopColor="#818cf8" />
-          <stop offset="100%" stopColor="#06b6d4" />
+          <stop offset="0%" stopColor="#2dd4bf" />
+          <stop offset="50%" stopColor="#06b6d4" />
+          <stop offset="100%" stopColor="#14b8a6" />
         </linearGradient>
 
         {/* Rune glow filter */}
@@ -41,8 +41,8 @@ export const TranslationRuneLogo: React.FC<TranslationRuneLogoProps> = ({
 
         {/* Arrow glow */}
         <linearGradient id="arrowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#38bdf8" />
-          <stop offset="100%" stopColor="#34d399" />
+          <stop offset="0%" stopColor="#2dd4bf" />
+          <stop offset="100%" stopColor="#14b8a6" />
         </linearGradient>
       </defs>
 
@@ -59,13 +59,13 @@ export const TranslationRuneLogo: React.FC<TranslationRuneLogoProps> = ({
       />
 
       {/* Decorative corner runes dots */}
-      <circle cx="8" cy="8" r="1.5" fill="#38bdf8" opacity="0.6" />
-      <circle cx="56" cy="8" r="1.5" fill="#34d399" opacity="0.6" />
-      <circle cx="8" cy="56" r="1.5" fill="#818cf8" opacity="0.6" />
-      <circle cx="56" cy="56" r="1.5" fill="#38bdf8" opacity="0.6" />
+      <circle cx="8" cy="8" r="1.5" fill="#2dd4bf" opacity="0.7" />
+      <circle cx="56" cy="8" r="1.5" fill="#14b8a6" opacity="0.7" />
+      <circle cx="8" cy="56" r="1.5" fill="#06b6d4" opacity="0.7" />
+      <circle cx="56" cy="56" r="1.5" fill="#2dd4bf" opacity="0.7" />
 
-      {/* LEFT SIDE: Ancient Magical Runes (Cyan Glow) */}
-      <g filter="url(#runeGlow)" stroke="#38bdf8" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+      {/* LEFT SIDE: Ancient Magical Runes (Turquoise Glow) */}
+      <g filter="url(#runeGlow)" stroke="#2dd4bf" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
         {/* Main Rune Stem (Elder Futhark Raido / Asian mystic symbol) */}
         <line x1="16" y1="16" x2="16" y2="48" />
         <path d="M16 18 L24 25 L16 32" fill="none" />
@@ -77,8 +77,8 @@ export const TranslationRuneLogo: React.FC<TranslationRuneLogoProps> = ({
       </g>
 
       {/* Mystical particle sparks on left rune */}
-      <circle cx="21" cy="21" r="1.2" fill="#38bdf8" />
-      <circle cx="23" cy="42" r="1" fill="#818cf8" />
+      <circle cx="21" cy="21" r="1.2" fill="#2dd4bf" />
+      <circle cx="23" cy="42" r="1" fill="#06b6d4" />
 
       {/* CENTER: Glowing Dynamic Translation Arrow & Energy Beam */}
       <g>
@@ -101,7 +101,7 @@ export const TranslationRuneLogo: React.FC<TranslationRuneLogoProps> = ({
         {/* Small translation pulse dot */}
         <circle cx="32" cy="32" r="1.5" fill="#ffffff" />
         {/* Small upper spark */}
-        <path d="M 31 22 L 33 24 L 35 22" stroke="#38bdf8" strokeWidth="1.2" opacity="0.7" fill="none" />
+        <path d="M 31 22 L 33 24 L 35 22" stroke="#2dd4bf" strokeWidth="1.2" opacity="0.8" fill="none" />
       </g>
 
       {/* RIGHT SIDE: Translated Modern Human Script (Clean Gold / White 'A' & 'FR') */}
@@ -115,10 +115,10 @@ export const TranslationRuneLogo: React.FC<TranslationRuneLogoProps> = ({
           strokeLinejoin="round"
           fill="none"
         />
-        <line x1="46.5" y1="37" x2="53.5" y2="37" stroke="#34d399" strokeWidth="2.4" strokeLinecap="round" />
+        <line x1="46.5" y1="37" x2="53.5" y2="37" stroke="#2dd4bf" strokeWidth="2.4" strokeLinecap="round" />
         
-        {/* Small golden language badge 'FR' at bottom right */}
-        <rect x="44" y="47" width="14" height="7" rx="2" fill="#047857" opacity="0.9" />
+        {/* Small turquoise language badge 'FR' at bottom right */}
+        <rect x="44" y="47" width="14" height="7" rx="2" fill="#0f766e" opacity="0.95" />
         <text
           x="51"
           y="52.5"

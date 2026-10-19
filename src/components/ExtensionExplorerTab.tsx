@@ -58,7 +58,7 @@ export const ExtensionExplorerTab: React.FC<ExtensionExplorerTabProps> = ({
         <button
           onClick={handleDownload}
           disabled={isDownloading}
-          className="flex items-center gap-2 px-5 py-2.5 bg-sky-500 hover:bg-sky-400 text-white font-semibold rounded-xl shadow-lg shadow-sky-500/20 transition-all cursor-pointer whitespace-nowrap disabled:opacity-60"
+          className="flex items-center gap-2 px-5 py-2.5 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold rounded-xl shadow-lg shadow-teal-500/20 transition-all cursor-pointer whitespace-nowrap disabled:opacity-60"
         >
           <Download className="w-4 h-4" />
           <span>{isDownloading ? 'Compression en cours...' : 'Télécharger Package (.zip)'}</span>
@@ -71,7 +71,7 @@ export const ExtensionExplorerTab: React.FC<ExtensionExplorerTabProps> = ({
         <div className="lg:col-span-4 border-r border-slate-800 p-4 space-y-2 bg-slate-950/40">
           <div className="flex items-center justify-between px-2 py-1 text-xs text-slate-400 font-semibold uppercase tracking-wider">
             <span>Fichiers de l'extension</span>
-            <span className="font-mono text-[11px] text-slate-500">{FIREFOX_EXTENSION_FILES.length} fichiers</span>
+            <span className="font-mono text-[11px] text-teal-400/80">{FIREFOX_EXTENSION_FILES.length} fichiers</span>
           </div>
 
           <div className="space-y-1">
@@ -83,12 +83,12 @@ export const ExtensionExplorerTab: React.FC<ExtensionExplorerTabProps> = ({
                   onClick={() => setSelectedFile(file)}
                   className={`w-full text-left px-3 py-2.5 rounded-lg text-xs font-mono transition-all flex items-center justify-between gap-2 cursor-pointer ${
                     isSelected
-                      ? 'bg-sky-500/15 border border-sky-500/40 text-sky-300 font-semibold'
+                      ? 'bg-teal-500/15 border border-teal-500/40 text-teal-300 font-semibold'
                       : 'text-slate-300 hover:bg-slate-800/60 hover:text-white border border-transparent'
                   }`}
                 >
                   <div className="flex items-center gap-2 truncate">
-                    <FileCode className={`w-4 h-4 shrink-0 ${isSelected ? 'text-sky-400' : 'text-slate-500'}`} />
+                    <FileCode className={`w-4 h-4 shrink-0 ${isSelected ? 'text-teal-400' : 'text-slate-500'}`} />
                     <span className="truncate">{file.filename}</span>
                   </div>
                   <span className="text-[10px] text-slate-500 uppercase shrink-0 font-sans">

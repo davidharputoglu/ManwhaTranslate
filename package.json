@@ -1,7 +1,10 @@
 {
-  "name": "react-example",
+  "name": "manwha-translate-webtoon-addon",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.4",
+  "description": "Extension Firefox et studio interactif pour traduire directement les images de manwhas et mangas in-situ",
+  "author": "kasparof57@gmail.com",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
