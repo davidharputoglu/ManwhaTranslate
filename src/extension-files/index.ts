@@ -262,9 +262,11 @@ const QUICK_BUBBLE_PRESETS = [
     originalText: '¡Todos los monstruos de esta mazmorra serán aniquilados por mí!',
     translations: {
       fr: "Tous les monstres de ce donjon, c'est moi qui vais les anéantir !",
-      ru: "Всех монстров в этом подземелье уничтожу я!",
       en: "All the monsters in this dungeon will be wiped out by me!",
+      it: "Tutti i mostri di questo dungeon saranno annientati da me!",
       es: "¡Todos los monstruos de esta mazmorra serán aniquilados por mí!",
+      pt: "Todos os monstros desta masmorra serão aniquilados por mim!",
+      ru: "Всех монстров в этом подземелье уничтожу я!",
       de: "Alle Monster in diesem Dungeon werden von mir vernichtet!"
     }
   },
@@ -275,9 +277,11 @@ const QUICK_BUBBLE_PRESETS = [
     originalText: '¡Retroceded! ¡No es una bestia que un cazador de rango F pueda enfrentar!',
     translations: {
       fr: "Reculez ! Ce n'est pas une créature qu'un chasseur de rang F peut affronter !",
-      ru: "Отступайте! Это не тот зверь, с которым справится ранг F!",
       en: "Fall back! This isn't a beast an F-rank hunter can take on!",
+      it: "Indietreggiate! Non è una bestia che un cacciatore di rango F può affrontare!",
       es: "¡Retroceded! ¡No es una bestia que un cazador de rango F pueda enfrentar!",
+      pt: "Recuem! Não é uma besta que um caçador de rank F possa enfrentar!",
+      ru: "Отступайте! Это не тот зверь, с которым справится ранг F!",
       de: "Zurückweichen! Das ist keine Bestie, der sich ein F-Rang-Jäger stellen kann!"
     }
   },
@@ -288,9 +292,11 @@ const QUICK_BUBBLE_PRESETS = [
     originalText: '¡¿La ventana del Sistema... está reaccionando otra vez?!',
     translations: {
       fr: "La fenêtre du Système... réagit encore une fois ?!",
-      ru: "Окно Системы... снова реагирует?!",
       en: "The System window... is reacting again?!",
+      it: "La finestra del Sistema... sta reagendo di nuovo?!",
       es: "¡¿La ventana del Sistema... está reaccionando otra vez?!",
+      pt: "A janela do Sistema... está reagindo de novo?!",
+      ru: "Окно Системы... снова реагирует?!",
       de: "Das Systemfenster... reagiert schon wieder?!"
     }
   }
